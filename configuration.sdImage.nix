@@ -79,15 +79,7 @@
     # Enabling WIFI
     wireless.enable = true;
     wireless.interfaces = [ "wlan0" ];
-    # If you want to connect also via WIFI to your router
-    wireless.networks."WIFI-SSID".psk = "wifipass";
-    # You can set default nameservers
-    nameservers = [ "192.168.100.3" "192.168.100.4" "192.168.100.1" ];
-    # You can set default gateway
-    defaultGateway = {
-      address = "192.168.100.1";
-      interface = "wlan0";
-    };
+   
   };
 
   # put your own configuration here, for example ssh keys:
@@ -109,7 +101,4 @@
       extraGroups = [ "wheel" "docker" ];
     };
   };
-  users.extraUsers.root.openssh.authorizedKeys.keys = [
-     "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDqlXJv/noNPmZMIfjJguRX3O+Z39xeoKhjoIBEyfeqgKGh9JOv7IDBWlNnd3rHVnVPzB9emiiEoAJpkJUnWNBidL6vPYn13r6Zrt/2WLT6TiUFU026ANdqMjIMEZrmlTsfzFT+OzpBqtByYOGGe19qD3x/29nbszPODVF2giwbZNIMo2x7Ww96U4agb2aSAwo/oQa4jQsnOpYRMyJQqCUhvX8LzvE9vFquLlrSyd8khUsEVV/CytmdKwUUSqmlo/Mn7ge/S12rqMwmLvWFMd08Rg9NHvRCeOjgKB4EI6bVwF8D6tNFnbsGVzTHl7Cosnn75U11CXfQ6+8MPq3cekYr lucernae@lombardia-N43SM"
-  ];
 }
